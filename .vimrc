@@ -84,8 +84,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " Map CtrlP to Ctrl + P
 nmap <C-P> :CtrlP<CR>
 
-" Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
