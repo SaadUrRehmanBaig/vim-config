@@ -11,3 +11,9 @@
 4. Type `:q` `:q` (twice) to quit vim. And type `vim` in terminal again.
 
 5. Install required plugins by `coc`, type: `:CocInstall coc-java coc-tsserver`
+
+## Custom settings:
+
+1. Pressing `CTRL` + `Down` and `CTRL` + `Up` moves the lines of code up and down.
+2. `Ctrl + c` toggles comments.
+3. `Ctrl + b` toggles nerdTreeToggle.
