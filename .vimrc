@@ -23,13 +23,15 @@ set wrap
 
 " Enable mouse support for scrolling
 set mouse=a
+
+set clipboard^=unnamed,unnamedplus
 " List of plugins
 "
 " set ctrl +b to open file explorer
 nnoremap <C-b> :NERDTreeToggle<CR>
 
 " Enable coc.nvim
-let g:coccglobal_extensions = ['coc-tsserver', 'coc-java']
+let g:coccglobal_extensions = ['coc-tsserver', 'coc-java', 'coc-json']
 
 call plug#begin('~/.vim/plugged')
 
@@ -77,12 +79,8 @@ nmap <C-c>   <Plug>NERDCommenterToggle
 vmap <C-c>   <Plug>NERDCommenterToggle<CR>gv
 imap <C-c>   <Esc><Plug>NERDCommenterTogglei
 
-
-" CtrlP configuration
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
 " Map CtrlP to Ctrl + P
-nmap <C-P> :CtrlP<CR>
+nmap <C-p> :CtrlP .<CR>
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
