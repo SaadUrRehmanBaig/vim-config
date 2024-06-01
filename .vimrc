@@ -9,9 +9,10 @@ set laststatus=2
 
 " Enable auto-indentation and smart tab handling
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
+filetype plugin indent on
 
 " Search settings
 set ignorecase
@@ -42,7 +43,8 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 
 " CtrlP - Fuzzy file finder
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Vim-ALE - Linting
 Plug 'dense-analysis/ale'
@@ -62,7 +64,6 @@ Plug 'metakirby5/codi.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'APZelos/blamer.nvim'
-
 " Add more plugins here
 " run :PlugInstall in vim normal mode
 
@@ -112,3 +113,16 @@ autocmd BufRead * call SyncTree()
 
 " refreshes NERDTree on tab changes
 nnoremap <silent> <C-w><C-w> :wincmd w<CR>:NERDTreeRefresh<CR>
+" Enable ALE
+let g:ale_enabled = 1
+
+" Automatically show error messages
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+let g:ale_set_highlights = 1
+" Enable fix on save globally
+let g:ale_fix_on_save = 1
+
+" Enable TypeScript support
+let g:ale_javascript_typescript_eslint_executable = 'eslint'
+autocmd FileType javascript,json let b:ale_fix_on_save = 1
