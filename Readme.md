@@ -1,4 +1,8 @@
-## Manual Install Instructions: 
+# My Vim Configuration
+
+This is a **personal Vim configuration** optimized for full-stack development.
+
+##  Manual Install Instructions: 
 
 1. Install VIM Plug with this command
 
@@ -12,8 +16,19 @@
 
 5. Install required plugins by `coc`, type: `:CocInstall coc-java coc-tsserver`
 
-## Custom settings:
+##  ⌨️ Key Bindings
+1. `Ctrl + b` Toggle NERDTree file explorer
 
-1. Pressing `CTRL` + `Down` and `CTRL` + `Up` moves the lines of code up and down.
-2. `Ctrl + c` toggles comments.
-3. `Ctrl + b` toggles nerdTreeToggle.
+2. `Ctrl + p` Open CtrlP fuzzy file finder
+
+3. `Ctrl + f` Search with Ripgrep
+
+4. `Ctrl + j` Move line down
+
+5. `Ctrl + k` Move line up
+
+6. `Ctrl + c` Toggle comments (normal, visual, and insert modes)
+
+7. `Ctrl + w` - Switch windows and refresh NERDTree
+
+8. `Ctrl + return` - Confirm completion selection
