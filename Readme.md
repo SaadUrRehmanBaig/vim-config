@@ -29,6 +29,6 @@ This is a **personal Vim configuration** optimized for full-stack development.
 
 6. `Ctrl + c` Toggle comments (normal, visual, and insert modes)
 
-7. `Ctrl + w` - Switch windows and refresh NERDTree
+7. `Ctrl + w` Switch windows and refresh NERDTree
 
-8. `Ctrl + return` - Confirm completion selection
+8. `Ctrl + return` Confirm completion selection
