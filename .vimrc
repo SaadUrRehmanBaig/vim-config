@@ -64,9 +64,9 @@ map <C-k> :m -2<CR>
 nmap <C-c>   <Plug>NERDCommenterToggle
 vmap <C-c>   <Plug>NERDCommenterToggle<CR>gv
 imap <C-c>   <Esc><Plug>NERDCommenterTogglei
-nnoremap <C-w> :tabclose<CR>
-nnoremap <C-]> :tabnext<CR>
-nnoremap <C-[> :tabprevious<CR>
+nnoremap <C-f> :Rg 
+vnoremap <C-f> :Rg 
+inoremap <C-f> <Esc>:Rg 
 
 " Map CtrlP to Ctrl + P
 nmap <C-p> :CtrlP .<CR>
