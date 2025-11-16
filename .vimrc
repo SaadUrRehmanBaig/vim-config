@@ -23,10 +23,6 @@ Plug 'preservim/nerdtree'
 " Fugitive - Git integration
 Plug 'tpope/vim-fugitive'
 
-" CtrlP - Fuzzy file finder
-"Plug 'kien/ctrlp.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-
 " Vim-ALE - Linting
 Plug 'dense-analysis/ale'
 
@@ -39,6 +35,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jcherven/jummidark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'metakirby5/codi.vim'
@@ -51,6 +48,8 @@ Plug 'posva/vim-vue'                  " Vue.js syntax and file detection
 Plug 'pangloss/vim-javascript'        " JS syntax
 Plug 'maxmellon/vim-jsx-pretty'       " JSX/TSX highlighting
 Plug 'StanAngeloff/php.vim'           " PHP improved syntax
+Plug 'jiangmiao/auto-pairs'
+Plug 'kdheepak/lazygit.nvim'
 " Add more plugins here
 " run :PlugInstall in vim normal mode
 
@@ -67,16 +66,21 @@ imap <C-c>   <Esc><Plug>NERDCommenterTogglei
 nnoremap <C-f> :Rg 
 vnoremap <C-f> :Rg 
 inoremap <C-f> <Esc>:Rg 
+imap <C-s> <Esc>:w<CR>
+nmap <C-s> :w<CR>
+vmap <C-s> :w<CR>
+imap <C-q> <Esc>:q<CR>
+nmap <C-q> :q<CR>
+
+imap <C-g> <Esc>:!Lazygit<CR>
+nmap <C-g> :!Lazygit<CR>
+vmap <C-g> :!lazygit<CR>
+
 
 " Map CtrlP to Ctrl + P
-nmap <C-p> :CtrlP .<CR>
-
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(node_modules|\.git|dist|build)$',
-\ 'file': '\v\.(exe|dll|so|dylib)$',
-\ 'link': 'some_bad_symlink'
-\ }
+nmap <C-p> :Files<CR>
+imap <C-p> <Esc>:Files<CR>
+vmap <C-p> :Files<CR>
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
