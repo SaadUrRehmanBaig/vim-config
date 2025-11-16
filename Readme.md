@@ -33,7 +33,7 @@ This is a **personal Vim configuration** optimized for full-stack development.
 
 7. `Ctrl + w` Switch windows and refresh NERDTree
 
-8. `Ctrl + return` Confirm completion selection
+8. `Ctrl + y` Confirm completion selection
 
 9. `Ctrl + s` To save the document
 
