@@ -36,7 +36,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jcherven/jummidark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep'
+"Plug 'jremmen/vim-ripgrep'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'metakirby5/codi.vim'
 Plug 'preservim/nerdcommenter'
@@ -63,9 +63,9 @@ map <C-k> :m -2<CR>
 nmap <C-c>   <Plug>NERDCommenterToggle
 vmap <C-c>   <Plug>NERDCommenterToggle<CR>gv
 imap <C-c>   <Esc><Plug>NERDCommenterTogglei
-nnoremap <C-f> :Rg 
-vnoremap <C-f> :Rg 
-inoremap <C-f> <Esc>:Rg 
+nnoremap <C-f> :Rg<CR> 
+vnoremap <C-f> :Rg<CR> 
+inoremap <C-f> <Esc>:Rg<CR> 
 imap <C-s> <Esc>:w<CR>
 nmap <C-s> :w<CR>
 vmap <C-s> :w<CR>
