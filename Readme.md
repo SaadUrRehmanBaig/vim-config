@@ -18,6 +18,10 @@ This is a **personal Vim configuration** optimized for full-stack development.
    
 6. Install lazygit by running `brew install lazygit`
 
+7. Install fzf by running `brew install fzf`
+
+8. Install rg by running `brew install rg`
+
 ##  ⌨️ Key Bindings
 1. `Ctrl + b` Toggle NERDTree file explorer
 
