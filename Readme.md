@@ -15,6 +15,8 @@ This is a **personal Vim configuration** optimized for full-stack development.
 4. Type `:q` `:q` (twice) to quit vim. And type `vim` in terminal again.
 
 5. Install required plugins by `coc`, type: `:CocInstall coc-java coc-tsserver`
+   
+6. Install lazygit by running `brew install lazygit`
 
 ##  ⌨️ Key Bindings
 1. `Ctrl + b` Toggle NERDTree file explorer
@@ -32,3 +34,9 @@ This is a **personal Vim configuration** optimized for full-stack development.
 7. `Ctrl + w` Switch windows and refresh NERDTree
 
 8. `Ctrl + return` Confirm completion selection
+
+9. `Ctrl + s` To save the document
+
+10. `Ctrl + q` To quit the editor.
+
+11. `Ctrl + g` To open the lazygit.
