@@ -13,7 +13,19 @@ set wrap
 set mouse=a
 set clipboard^=unnamed,unnamedplus
 nnoremap <C-b> :NERDTreeToggle<CR>
-let g:coccglobal_extensions = ['coc-tsserver', 'coc-java', 'coc-json', 'coc-pyright', 'coc-php', 'coc-vetur', 'coc-snippets', 'coc-prettier' ]
+set completeopt=menuone,noinsert,noselect
+"let g:cocglobal_extensions = ['coc-tsserver', 'coc-java', 'coc-json', 'coc-pyright', 'coc-php', 'coc-vetur', 'coc-snippets', 'coc-prettier' ]
+
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-java',
+  \ 'coc-json',
+  \ 'coc-pyright',
+  \ 'coc-phpls',
+  \ 'coc-vetur',
+  \ 'coc-snippets',
+  \ 'coc-prettier'
+  \ ]
 
 call plug#begin('~/.vim/plugged')
 
@@ -82,6 +94,16 @@ nmap <C-p> :Files<CR>
 imap <C-p> <Esc>:Files<CR>
 vmap <C-p> :Files<CR>
 
+
+" Go to definition
+nmap <silent> gd <Plug>(coc-definition)
+" Go to type definition
+nmap <silent> gy <Plug>(coc-type-definition)
+" Go to implementation
+nmap <silent> gi <Plug>(coc-implementation)
+" Show references
+nmap <silent> gr <Plug>(coc-references)
+
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 
@@ -91,7 +113,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " Enable insert mode completion
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible()
+      \ ? coc#pum#confirm()
+      \ : "\<C-g>u\<CR>"
+
 
 " Check if NERDTree is open or active
 function! IsNERDTreeOpen()
